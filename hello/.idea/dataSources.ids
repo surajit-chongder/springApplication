@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - postgres@localhost" uuid="24680b5f-075b-4948-a7e0-8363d2287561">
+    <database-info product="PostgreSQL" version="9.5.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="postgres"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>955</introspection-state-number>
+        <introspection-timestamp>2016-05-03.20:24:47.451</introspection-timestamp>
+      </schema>
+      <table id="3" parent="2" name="books">
+        <object-id>16397</object-id>
+        <state-number>945</state-number>
+      </table>
+      <table id="4" parent="2" name="merchandise">
+        <object-id>16403</object-id>
+        <state-number>955</state-number>
+      </table>
+      <table id="5" parent="2" name="product">
+        <object-id>16400</object-id>
+        <state-number>954</state-number>
+      </table>
+      <column id="6" parent="3" name="id">
+        <state-number>945</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="7" parent="3" name="title">
+        <state-number>945</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="8" parent="4" name="id">
+        <state-number>955</state-number>
+        <data-type>numeric(5)</data-type>
+      </column>
+      <column id="9" parent="4" name="name">
+        <state-number>955</state-number>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="10" parent="5" name="id">
+        <state-number>954</state-number>
+        <data-type>numeric(5)</data-type>
+      </column>
+      <column id="11" parent="5" name="productname">
+        <state-number>954</state-number>
+        <data-type>varchar(50)</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>
