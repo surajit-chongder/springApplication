@@ -13,6 +13,11 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 
+jar {
+    baseName = 'gs-relational-data-access'
+    version =  '0.1.0'
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -21,6 +26,7 @@ repositories {
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
+    compile("org.springframework:spring-jdbc")
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile 'postgresql:postgresql:9.1-901-1.jdbc4'
 }
