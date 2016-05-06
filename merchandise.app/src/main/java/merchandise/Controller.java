@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class Controller {
@@ -43,7 +44,7 @@ public class Controller {
     }
 
     @RequestMapping(value = "/supplier/{name}", method = RequestMethod.GET)
-    public List<String> getProductsName(@PathVariable String name) {
+    public List<String> getProductsNameOfSpecificSupplier(@PathVariable String name) {
         String checkQuery = "select pro_id from supply_details where sup_id in(select id from supplier3 where name=?)";
         List<Integer> productIds = this.jdbcTemplate.query(checkQuery, new Object[]{name}, new productIdsMapper());
         List<Product> products = (List<Product>) productRepository.findAll();
@@ -71,6 +72,85 @@ public class Controller {
             return true;
         }
     }
+    @RequestMapping(value = "/supplier/save",method = RequestMethod.POST)
+    public String saveSupplierAndProduct(@RequestBody Map<String,Object> data){
+        String item = (String) data.get("item");
+        String supplierName = (String) data.get("name");
+        if(hasProduct(supplierName,item)){
+            return "supplier already have the product";
+        }
+        if(!isExistingSupplier(supplierName)){
+            Supplier newSupplier = new Supplier();
+            newSupplier.setName(supplierName);
+            newSupplier.setId(createNewSupplierId());
+
+            supplierRepository.save(newSupplier);
+        }
+        if(!isProductExists(item)){
+            Product newProduct = new Product();
+            newProduct.setId(createNewProductId());
+            newProduct.setName(item);
+            productRepository.save(newProduct);
+        }
+        SupplyDetails newSupplyDetails = new SupplyDetails();
+        newSupplyDetails.setPro_id(getSpecificProductId(item));
+        newSupplyDetails.setSup_id(getSpecificSupplierId(supplierName));
+        supplyDetailsRepository.save(newSupplyDetails);
+        return "product added to supplier";
+    }
+
+    private int getSpecificSupplierId(String supplierName) {
+        List<Supplier> supplierList = (List<Supplier>) supplierRepository.findAll();
+        for (Supplier supplier : supplierList) {
+            if (supplier.getName().equals(supplierName))
+                return supplier.getId();
+        }
+        return 0;
+    }
+
+    private int getSpecificProductId(String item) {
+        List<Product> products = (List<Product>) productRepository.findAll();
+        for (Product product : products) {
+            if (product.getName().equals(item))
+                return product.getId();
+        }
+        return 0;
+    }
+
+    private boolean isExistingSupplier(String supplierName) {
+        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
+        for (Supplier supplier : suppliers) {
+            if (supplier.getName().equals(supplierName))
+                return true;
+        }
+        return false;
+    }
+
+    private int createNewSupplierId() {
+        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
+        int totalSupplier = suppliers.size();
+        return ++totalSupplier;
+    }
+    private int createNewProductId() {
+        List<Product> products = (List<Product>) productRepository.findAll();
+        int totalProduct = products.size();
+        return ++totalProduct;
+    }
+
+    private boolean hasProduct(String supplierName, String item) {
+        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
+        for (Supplier supplier : suppliers) {
+            if(supplier.getName().equals(supplierName)) {
+                List<String> allProduct = getProductsNameOfSpecificSupplier(supplierName);
+                for (String eachProduct : allProduct) {
+                    if(eachProduct.equals(item))
+                        return true;
+                }
+            }
+        }
+        return false;
+    }
+
     @RequestMapping(value = "/product/all", method = RequestMethod.GET)
     public List<String> getAllProductList(){
         List<Product> products = (List<Product>) productRepository.findAll();

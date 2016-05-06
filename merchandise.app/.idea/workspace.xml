@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b474146-f9a2-4f4a-a807-00ea6c41f10c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/Controller$NameMapper.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/Controller$NameMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/Controller.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/Product.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/Supplier.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/Supplier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java" />
     </list>
     <ignored path="merchandise.app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,10 +63,18 @@
       <file leaf-file-name="SupplyDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="420">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,16 +123,16 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+            <state relative-caret-position="1209">
+              <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <marker date="1462537054000" expanded="true" signature="936:1023" placeholder="select id fr... product3" />
-                <marker date="1462537054000" expanded="true" signature="986:1022" placeholder="select id fr... product3" />
-                <marker date="1462537054000" expanded="true" signature="1731:1819" placeholder="select pro_i... supply_details" />
-                <marker date="1462537054000" expanded="true" signature="1781:1818" placeholder="select id fr... supplier3" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <marker date="1462539832000" expanded="true" signature="958:1045" placeholder="select id fr... product3" />
+                <marker date="1462539832000" expanded="true" signature="1008:1044" placeholder="select id fr... product3" />
+                <marker date="1462539832000" expanded="true" signature="1771:1859" placeholder="select pro_i... supply_details" />
+                <marker date="1462539832000" expanded="true" signature="1821:1858" placeholder="select id fr... supplier3" />
               </folding>
             </state>
           </provider>
@@ -528,6 +532,7 @@
         <option value="$PROJECT_DIR$/src/main/java/merchandise/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/supplyDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/supplyDetailsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" />
       </list>
     </option>
@@ -545,9 +550,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="38" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="789" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1082,7 +1087,7 @@
       <option name="presentableId" value="Default" />
       <updated>1462432617412</updated>
       <workItem from="1462432623486" duration="2030000" />
-      <workItem from="1462437026124" duration="44602000" />
+      <workItem from="1462437026124" duration="47494000" />
     </task>
     <servers />
   </component>
@@ -1104,10 +1109,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46632000" />
+    <option name="totallyTimeSpent" value="49524000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="38" width="1440" height="789" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1118,7 +1123,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18794835" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18502825" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1226,12 +1231,12 @@
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <marker date="1462537054000" expanded="true" signature="936:1023" placeholder="select id fr... product3" />
-            <marker date="1462537054000" expanded="true" signature="986:1022" placeholder="select id fr... product3" />
-            <marker date="1462537054000" expanded="true" signature="1731:1819" placeholder="select pro_i... supply_details" />
-            <marker date="1462537054000" expanded="true" signature="1781:1818" placeholder="select id fr... supplier3" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <marker date="1462539832000" expanded="true" signature="958:1045" placeholder="select id fr... product3" />
+            <marker date="1462539832000" expanded="true" signature="1008:1044" placeholder="select id fr... product3" />
+            <marker date="1462539832000" expanded="true" signature="1771:1859" placeholder="select pro_i... supply_details" />
+            <marker date="1462539832000" expanded="true" signature="1821:1858" placeholder="select id fr... supplier3" />
           </folding>
         </state>
       </provider>
@@ -1356,16 +1361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/ProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1386,18 +1381,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+        <state relative-caret-position="420">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <marker date="1462537054000" expanded="true" signature="936:1023" placeholder="select id fr... product3" />
-            <marker date="1462537054000" expanded="true" signature="986:1022" placeholder="select id fr... product3" />
-            <marker date="1462537054000" expanded="true" signature="1731:1819" placeholder="select pro_i... supply_details" />
-            <marker date="1462537054000" expanded="true" signature="1781:1818" placeholder="select id fr... supplier3" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <marker date="1462539832000" expanded="true" signature="958:1045" placeholder="select id fr... product3" />
+            <marker date="1462539832000" expanded="true" signature="1008:1044" placeholder="select id fr... product3" />
+            <marker date="1462539832000" expanded="true" signature="1771:1859" placeholder="select pro_i... supply_details" />
+            <marker date="1462539832000" expanded="true" signature="1821:1858" placeholder="select id fr... supplier3" />
           </folding>
         </state>
       </provider>
