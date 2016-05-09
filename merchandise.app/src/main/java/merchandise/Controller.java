@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,91 +29,100 @@ public class Controller {
 
     @RequestMapping(value = "/product/{name}", method = RequestMethod.GET)
     public List<String> getSuppliersName(@PathVariable String name) {
-        String checkQuery = "select sup_id from supply_details where pro_id in(select id from product3 where name=?)";
-        List<Integer> supplierIds = this.jdbcTemplate.query(checkQuery, new Object[]{name}, new supIdsMapper());
-        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
-        List<String> supplierList = new ArrayList<>();
-        for (Integer supplierId : supplierIds) {
-            for (Supplier eachSupplier : suppliers) {
-                if (eachSupplier.getId() == supplierId)
-                    supplierList.add(eachSupplier.getName());
-            }
-        }
-        return supplierList;
+        String checkQuery = "select name from supplier3 where id in(select sup_id from supply_details where pro_id in(select id from product3 where name=?))";
+        return this.jdbcTemplate.query(checkQuery, new Object[]{name}, new nameMapper());
     }
 
     @RequestMapping(value = "/supplier/{name}", method = RequestMethod.GET)
     public List<String> getProductsNameOfSpecificSupplier(@PathVariable String name) {
-        String checkQuery = "select pro_id from supply_details where sup_id in(select id from supplier3 where name=?)";
-        List<Integer> productIds = this.jdbcTemplate.query(checkQuery, new Object[]{name}, new productIdsMapper());
-        List<Product> products = (List<Product>) productRepository.findAll();
-        List<String> productList = new ArrayList<>();
-        for (Integer productId : productIds) {
-            for (Product eachProduct : products) {
-                if (eachProduct.getId() == productId)
-                    productList.add(eachProduct.getName());
-            }
-        }
-        return productList;
+        String checkQuery = "select name from product3 where id in(select pro_id from supply_details where sup_id in(select id from supplier3 where name=?))";
+        return this.jdbcTemplate.query(checkQuery, new Object[]{name}, new nameMapper());
+    }
+
+    private int getSpecificSupplierId(String supplierName) {
+        String checkQuery = "SELECT id from supplier3 where name=?";
+        return this.jdbcTemplate.queryForObject(checkQuery, new Object[]{supplierName}, Integer.class);
+    }
+
+    private int getSpecificProductId(String item) {
+        String checkQuery = "select id from product3 where name=?";
+        return this.jdbcTemplate.queryForObject(checkQuery, new Object[]{item}, Integer.class);
+    }
+
+    private int createNewSupplierId() {
+        String checkQuery = "SELECT max(id) from supplier3";
+        Integer lastSupplierId = this.jdbcTemplate.queryForObject(checkQuery, Integer.class);
+        return ++lastSupplierId;
+    }
+
+    private int createNewProductId() {
+        String checkQuery = "select max(id) from product3";
+        Integer lastProductId = this.jdbcTemplate.queryForObject(checkQuery, Integer.class);
+        return ++lastProductId;
+    }
+
+    @RequestMapping(value = "/product/all", method = RequestMethod.GET)
+    public List<String> getAllProductList() {
+        String checkQuery = "select name from product3";
+        return this.jdbcTemplate.query(checkQuery, new nameMapper());
+    }
+
+    @RequestMapping(value = "/supplier/all", method = RequestMethod.GET)
+    public List<String> getAllSupplierList() {
+        String checkQuery = "select name from supplier3";
+        return this.jdbcTemplate.query(checkQuery, new nameMapper());
     }
 
     @RequestMapping(value = "/product/save", method = RequestMethod.POST)
     public boolean addProduct(@RequestBody Product product) {
-        List<Product> products = (List<Product>) productRepository.findAll();
-        int totalSize = products.size();
         if (isProductExists(product.getName()))
             return false;
         else {
-            Product newProduct = new Product();
-            newProduct.setId(++totalSize);
-            newProduct.setName(product.getName());
-            productRepository.save(newProduct);
+            createAndSaveNewProduct(product.getName());
             return true;
         }
     }
-    @RequestMapping(value = "/supplier/save",method = RequestMethod.POST)
-    public String saveSupplierAndProduct(@RequestBody Map<String,Object> data){
+
+    @RequestMapping(value = "/supplier/save", method = RequestMethod.POST)
+    public boolean addSupplier(@RequestBody Supplier supplier) {
+        if (isExistingSupplier(supplier.getName()))
+            return false;
+        else {
+            createAndSaveNewSupplier(supplier.getName());
+            return true;
+        }
+    }
+
+    @RequestMapping(value = "/cart/save", method = RequestMethod.POST)
+    public String saveSupplierAndProduct(@RequestBody Map<String, Object> data) {
         String item = (String) data.get("item");
         String supplierName = (String) data.get("name");
-        if(hasProduct(supplierName,item)){
+        if (hasProduct(supplierName, item)) {
             return "supplier already have the product";
         }
-        if(!isExistingSupplier(supplierName)){
-            Supplier newSupplier = new Supplier();
-            newSupplier.setName(supplierName);
-            newSupplier.setId(createNewSupplierId());
-
-            supplierRepository.save(newSupplier);
+        if (!isExistingSupplier(supplierName)) {
+            createAndSaveNewSupplier(supplierName);
         }
-        if(!isProductExists(item)){
-            Product newProduct = new Product();
-            newProduct.setId(createNewProductId());
-            newProduct.setName(item);
-            productRepository.save(newProduct);
+        if (!isProductExists(item)) {
+            createAndSaveNewProduct(item);
         }
-        SupplyDetails newSupplyDetails = new SupplyDetails();
-        newSupplyDetails.setPro_id(getSpecificProductId(item));
-        newSupplyDetails.setSup_id(getSpecificSupplierId(supplierName));
-        supplyDetailsRepository.save(newSupplyDetails);
+        String updateQuery = "insert into supply_details values(?, ?)";
+        this.jdbcTemplate.update(updateQuery,getSpecificProductId(item), getSpecificSupplierId(supplierName));
         return "product added to supplier";
     }
 
-    private int getSpecificSupplierId(String supplierName) {
-        List<Supplier> supplierList = (List<Supplier>) supplierRepository.findAll();
-        for (Supplier supplier : supplierList) {
-            if (supplier.getName().equals(supplierName))
-                return supplier.getId();
-        }
-        return 0;
+    private void createAndSaveNewProduct(String productName) {
+        Product newProduct = new Product();
+        newProduct.setId(createNewProductId());
+        newProduct.setName(productName);
+        productRepository.save(newProduct);
     }
 
-    private int getSpecificProductId(String item) {
-        List<Product> products = (List<Product>) productRepository.findAll();
-        for (Product product : products) {
-            if (product.getName().equals(item))
-                return product.getId();
-        }
-        return 0;
+    private void createAndSaveNewSupplier(String supplierName) {
+        Supplier newSupplier = new Supplier();
+        newSupplier.setName(supplierName);
+        newSupplier.setId(createNewSupplierId());
+        supplierRepository.save(newSupplier);
     }
 
     private boolean isExistingSupplier(String supplierName) {
@@ -126,48 +134,18 @@ public class Controller {
         return false;
     }
 
-    private int createNewSupplierId() {
-        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
-        int totalSupplier = suppliers.size();
-        return ++totalSupplier;
-    }
-    private int createNewProductId() {
-        List<Product> products = (List<Product>) productRepository.findAll();
-        int totalProduct = products.size();
-        return ++totalProduct;
-    }
-
     private boolean hasProduct(String supplierName, String item) {
         List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
         for (Supplier supplier : suppliers) {
-            if(supplier.getName().equals(supplierName)) {
+            if (supplier.getName().equals(supplierName)) {
                 List<String> allProduct = getProductsNameOfSpecificSupplier(supplierName);
                 for (String eachProduct : allProduct) {
-                    if(eachProduct.equals(item))
+                    if (eachProduct.equals(item))
                         return true;
                 }
             }
         }
         return false;
-    }
-
-    @RequestMapping(value = "/product/all", method = RequestMethod.GET)
-    public List<String> getAllProductList(){
-        List<Product> products = (List<Product>) productRepository.findAll();
-        List<String> productList = new ArrayList<>();
-        for (Product product : products) {
-            productList.add(product.getName());
-        }
-        return productList;
-    }
-    @RequestMapping(value = "/supplier/all", method = RequestMethod.GET)
-    public List<String> getAllSupplierList(){
-        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
-        List<String> supplierList = new ArrayList<>();
-        for (Supplier supplier : suppliers) {
-            supplierList.add(supplier.getName());
-        }
-        return supplierList;
     }
 
     private boolean isProductExists(String productName) {
@@ -179,15 +157,9 @@ public class Controller {
         return false;
     }
 
-    private static final class supIdsMapper implements RowMapper<Integer> {
-        public Integer mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return rs.getInt("sup_id");
-        }
-    }
-
-    private static final class productIdsMapper implements RowMapper<Integer> {
-        public Integer mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return rs.getInt("pro_id");
+    private static final class nameMapper implements RowMapper<String> {
+        public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+            return rs.getString("name");
         }
     }
 }
