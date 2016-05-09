@@ -1,6 +1,5 @@
 package merchandise;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +24,10 @@ public class ControllerTest {
         supplier2.setId(1002);
         supplier1.setName("sony");
         supplier2.setName("micromax");
-        supplier1.setPro_id(1);
-        supplier2.setPro_id(2);
     }
 
     @Test
     public void name() throws Exception {
         Controller controller = new Controller();
-        Assert.assertEquals(true,controller.hasProduct("sony",product1));
     }
 }
