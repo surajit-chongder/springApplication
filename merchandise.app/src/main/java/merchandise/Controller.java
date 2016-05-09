@@ -27,26 +27,16 @@ public class Controller {
         return "Welcome to merchandise app";
     }
 
-    @RequestMapping(value = "/product/{name}", method = RequestMethod.GET)
-    public List<String> getSuppliersName(@PathVariable String name) {
-        String checkQuery = "select name from supplier3 where id in(select sup_id from supply_details where pro_id in(select id from product3 where name=?))";
-        return this.jdbcTemplate.query(checkQuery, new Object[]{name}, new nameMapper());
+    @RequestMapping(value = "/suppliers/{id}/products", method = RequestMethod.GET)
+    public List<String> getProductsNameOfSpecificSupplier(@PathVariable Integer id) {
+        String checkQuery = "select name from product3 where id in(select pro_id from supply_details where sup_id=?)";
+        return this.jdbcTemplate.query(checkQuery, new Object[]{id}, new nameMapper());
     }
 
-    @RequestMapping(value = "/supplier/{name}", method = RequestMethod.GET)
-    public List<String> getProductsNameOfSpecificSupplier(@PathVariable String name) {
-        String checkQuery = "select name from product3 where id in(select pro_id from supply_details where sup_id in(select id from supplier3 where name=?))";
-        return this.jdbcTemplate.query(checkQuery, new Object[]{name}, new nameMapper());
-    }
-
-    private int getSpecificSupplierId(String supplierName) {
-        String checkQuery = "SELECT id from supplier3 where name=?";
-        return this.jdbcTemplate.queryForObject(checkQuery, new Object[]{supplierName}, Integer.class);
-    }
-
-    private int getSpecificProductId(String item) {
-        String checkQuery = "select id from product3 where name=?";
-        return this.jdbcTemplate.queryForObject(checkQuery, new Object[]{item}, Integer.class);
+    @RequestMapping(value = "/products/{id}/suppliers", method = RequestMethod.GET)
+    public List<String> getSuppliersName(@PathVariable Integer id) {
+        String checkQuery = "select name from supplier3 where id in(select sup_id from supply_details where pro_id=?)";
+        return this.jdbcTemplate.query(checkQuery, new Object[]{id}, new nameMapper());
     }
 
     private int createNewSupplierId() {
@@ -61,54 +51,68 @@ public class Controller {
         return ++lastProductId;
     }
 
-    @RequestMapping(value = "/product/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
     public List<String> getAllProductList() {
         String checkQuery = "select name from product3";
         return this.jdbcTemplate.query(checkQuery, new nameMapper());
     }
 
-    @RequestMapping(value = "/supplier/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/suppliers", method = RequestMethod.GET)
     public List<String> getAllSupplierList() {
         String checkQuery = "select name from supplier3";
         return this.jdbcTemplate.query(checkQuery, new nameMapper());
     }
 
-    @RequestMapping(value = "/product/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/products", method = RequestMethod.POST)
     public boolean addProduct(@RequestBody Product product) {
-        if (isProductExists(product.getName()))
+        if (isProductExists(product.getName().toUpperCase()))
             return false;
         else {
-            createAndSaveNewProduct(product.getName());
+            createAndSaveNewProduct(product.getName().toUpperCase());
             return true;
         }
     }
 
-    @RequestMapping(value = "/supplier/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/suppliers", method = RequestMethod.POST)
     public boolean addSupplier(@RequestBody Supplier supplier) {
-        if (isExistingSupplier(supplier.getName()))
+        if (isExistingSupplier(supplier.getName().toUpperCase()))
             return false;
         else {
-            createAndSaveNewSupplier(supplier.getName());
+            createAndSaveNewSupplier(supplier.getName().toUpperCase());
             return true;
         }
     }
 
-    @RequestMapping(value = "/cart/save", method = RequestMethod.POST)
-    public String saveSupplierAndProduct(@RequestBody Map<String, Object> data) {
-        String item = (String) data.get("item");
-        String supplierName = (String) data.get("name");
-        if (hasProduct(supplierName, item)) {
+    @RequestMapping(value = "/suppliers/{supplier_id}/products", method = RequestMethod.POST)
+    public String saveSupplierAndProduct(@PathVariable Integer supplier_id, @RequestBody Map<String, Object> data) {
+        int productId = (Integer) data.get("product_id");
+        if (hasSpecificProduct(supplier_id, productId)) {
             return "supplier already have the product";
         }
-        if (!isExistingSupplier(supplierName)) {
-            createAndSaveNewSupplier(supplierName);
+        if (!isValidSupplier(supplier_id)) {
+            return "supplier does not exists";
         }
-        if (!isProductExists(item)) {
-            createAndSaveNewProduct(item);
+        if (!isValidProduct(productId)) {
+            return "product is not available";
         }
         String updateQuery = "insert into supply_details values(?, ?)";
-        this.jdbcTemplate.update(updateQuery,getSpecificProductId(item), getSpecificSupplierId(supplierName));
+        this.jdbcTemplate.update(updateQuery, productId, supplier_id);
         return "product added to supplier";
+    }
+
+    private boolean isValidProduct(int productId) {
+        String sqlQuery = "select exists(select 1 from product3 where id=?)";
+        return jdbcTemplate.queryForObject(sqlQuery, Boolean.class, productId);
+    }
+
+    private boolean isValidSupplier(int supplierId) {
+        String sqlQuery = "select exists(select 1 from supplier3 where id=?)";
+        return jdbcTemplate.queryForObject(sqlQuery, Boolean.class, supplierId);
+    }
+
+    private boolean hasSpecificProduct(int supplierId, int productId) {
+        String sqlQuery = "select exists(select 1 from supply_details where pro_id=? and sup_id=?)";
+        return jdbcTemplate.queryForObject(sqlQuery, Boolean.class, productId, supplierId);
     }
 
     private void createAndSaveNewProduct(String productName) {
@@ -134,19 +138,6 @@ public class Controller {
         return false;
     }
 
-    private boolean hasProduct(String supplierName, String item) {
-        List<Supplier> suppliers = (List<Supplier>) supplierRepository.findAll();
-        for (Supplier supplier : suppliers) {
-            if (supplier.getName().equals(supplierName)) {
-                List<String> allProduct = getProductsNameOfSpecificSupplier(supplierName);
-                for (String eachProduct : allProduct) {
-                    if (eachProduct.equals(item))
-                        return true;
-                }
-            }
-        }
-        return false;
-    }
 
     private boolean isProductExists(String productName) {
         List<Product> products = (List<Product>) productRepository.findAll();

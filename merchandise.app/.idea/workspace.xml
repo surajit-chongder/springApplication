@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b474146-f9a2-4f4a-a807-00ea6c41f10c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/merchandise/ControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/merchandise/ControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" />
     </list>
     <ignored path="merchandise.app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,26 +79,32 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-457">
-              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            <state relative-caret-position="-678">
+              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#703#0" expanded="true" />
                 <element signature="e#753#754#0" expanded="true" />
-                <marker date="1462718491000" expanded="true" signature="930:1057" placeholder="select name supplier3" />
-                <marker date="1462718491000" expanded="true" signature="969:1056" placeholder="select sup_i... supply_details" />
-                <marker date="1462718491000" expanded="true" signature="1019:1055" placeholder="select id fr... product3" />
-                <marker date="1462718491000" expanded="true" signature="1349:1476" placeholder="select name product3" />
-                <marker date="1462718491000" expanded="true" signature="1387:1475" placeholder="select pro_i... supply_details" />
-                <marker date="1462718491000" expanded="true" signature="1437:1474" placeholder="select id fr... supplier3" />
-                <marker date="1462718491000" expanded="true" signature="1666:1703" placeholder="SELECT id fr... supplier3" />
-                <marker date="1462718491000" expanded="true" signature="1672:1703" placeholder="select id fr... supplier3" />
-                <marker date="1462718491000" expanded="true" signature="1898:1934" placeholder="select id fr... product3" />
-                <marker date="1462718491000" expanded="true" signature="2109:2138" placeholder="SELECT max(i... supplier3" />
-                <marker date="1462718491000" expanded="true" signature="2343:2371" placeholder="select max(i... product3" />
-                <marker date="1462718491000" expanded="true" signature="2653:2678" placeholder="select name product3" />
-                <marker date="1462718491000" expanded="true" signature="2907:2933" placeholder="select name supplier3" />
-                <marker date="1462718491000" expanded="true" signature="4272:4311" placeholder="insert into supply_details... " />
+                <marker date="1462789582000" expanded="true" signature="955:1042" placeholder="select name product3" />
+                <marker date="1462789582000" expanded="true" signature="993:1041" placeholder="select pro_i... supply_details" />
+                <marker date="1462789582000" expanded="true" signature="993:1042" placeholder="select pro_i... supply_details" />
+                <marker date="1462789582000" expanded="true" signature="1040:1041" placeholder="select id fr... supplier3" />
+                <marker date="1462789582000" expanded="true" signature="1322:1410" placeholder="select name product3" />
+                <marker date="1462789582000" expanded="true" signature="1361:1409" placeholder="select sup_i... supply_details" />
+                <marker date="1462789582000" expanded="true" signature="1361:1410" placeholder="select sup_i... supply_details" />
+                <marker date="1462789582000" expanded="true" signature="1577:1606" placeholder="SELECT max(i... supplier3" />
+                <marker date="1462789582000" expanded="true" signature="1811:1839" placeholder="select max(i... product3" />
+                <marker date="1462789582000" expanded="true" signature="2118:2143" placeholder="select name product3" />
+                <marker date="1462789582000" expanded="true" signature="2369:2395" placeholder="select name supplier3" />
+                <marker date="1462789582000" expanded="true" signature="3803:3842" placeholder="insert into supply_details... " />
+                <marker date="1462789582000" expanded="true" signature="4046:4094" placeholder="select exist... " />
+                <marker date="1462789582000" expanded="true" signature="4060:4073" placeholder="select 1 fro... " />
+                <marker date="1462789582000" expanded="true" signature="4060:4093" placeholder="select 1 fro... product3" />
+                <marker date="1462789582000" expanded="true" signature="4265:4314" placeholder="select exist... " />
+                <marker date="1462789582000" expanded="true" signature="4279:4313" placeholder="select 1 fro... supplier3" />
+                <marker date="1462789582000" expanded="true" signature="4504:4575" placeholder="select exist... " />
+                <marker date="1462789582000" expanded="true" signature="4518:4573" placeholder="select 1 fro... supply_details" />
+                <marker date="1462789582000" expanded="true" signature="4518:4574" placeholder="select 1 fro... supply_details" />
               </folding>
             </state>
           </provider>
@@ -462,8 +468,8 @@
         <option value="$PROJECT_DIR$/src/main/java/merchandise/supplyDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/supplyDetailsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/SupplyDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" />
         <option value="$PROJECT_DIR$/src/test/java/merchandise/ControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/merchandise/Controller.java" />
       </list>
     </option>
   </component>
@@ -1125,7 +1131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1462432617412</updated>
       <workItem from="1462432623486" duration="2030000" />
-      <workItem from="1462437026124" duration="60321000" />
+      <workItem from="1462437026124" duration="76886000" />
     </task>
     <servers />
   </component>
@@ -1153,15 +1159,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62351000" />
+    <option name="totallyTimeSpent" value="78916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1172,7 +1178,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1285,20 +1291,26 @@
             <element signature="imports" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
             <element signature="e#753#754#0" expanded="true" />
-            <marker date="1462718491000" expanded="true" signature="930:1057" placeholder="select name supplier3" />
-            <marker date="1462718491000" expanded="true" signature="969:1056" placeholder="select sup_i... supply_details" />
-            <marker date="1462718491000" expanded="true" signature="1019:1055" placeholder="select id fr... product3" />
-            <marker date="1462718491000" expanded="true" signature="1349:1476" placeholder="select name product3" />
-            <marker date="1462718491000" expanded="true" signature="1387:1475" placeholder="select pro_i... supply_details" />
-            <marker date="1462718491000" expanded="true" signature="1437:1474" placeholder="select id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1666:1703" placeholder="SELECT id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1672:1703" placeholder="select id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1898:1934" placeholder="select id fr... product3" />
-            <marker date="1462718491000" expanded="true" signature="2109:2138" placeholder="SELECT max(i... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="2343:2371" placeholder="select max(i... product3" />
-            <marker date="1462718491000" expanded="true" signature="2653:2678" placeholder="select name product3" />
-            <marker date="1462718491000" expanded="true" signature="2907:2933" placeholder="select name supplier3" />
-            <marker date="1462718491000" expanded="true" signature="4272:4311" placeholder="insert into supply_details... " />
+            <marker date="1462789582000" expanded="true" signature="955:1042" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="993:1041" placeholder="select pro_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="993:1042" placeholder="select pro_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1040:1041" placeholder="select id fr... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="1322:1410" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="1361:1409" placeholder="select sup_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1361:1410" placeholder="select sup_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1577:1606" placeholder="SELECT max(i... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="1811:1839" placeholder="select max(i... product3" />
+            <marker date="1462789582000" expanded="true" signature="2118:2143" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="2369:2395" placeholder="select name supplier3" />
+            <marker date="1462789582000" expanded="true" signature="3803:3842" placeholder="insert into supply_details... " />
+            <marker date="1462789582000" expanded="true" signature="4046:4094" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4060:4073" placeholder="select 1 fro... " />
+            <marker date="1462789582000" expanded="true" signature="4060:4093" placeholder="select 1 fro... product3" />
+            <marker date="1462789582000" expanded="true" signature="4265:4314" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4279:4313" placeholder="select 1 fro... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="4504:4575" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4518:4573" placeholder="select 1 fro... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="4518:4574" placeholder="select 1 fro... supply_details" />
           </folding>
         </state>
       </provider>
@@ -1463,26 +1475,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-457">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+        <state relative-caret-position="-678">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
             <element signature="e#753#754#0" expanded="true" />
-            <marker date="1462718491000" expanded="true" signature="930:1057" placeholder="select name supplier3" />
-            <marker date="1462718491000" expanded="true" signature="969:1056" placeholder="select sup_i... supply_details" />
-            <marker date="1462718491000" expanded="true" signature="1019:1055" placeholder="select id fr... product3" />
-            <marker date="1462718491000" expanded="true" signature="1349:1476" placeholder="select name product3" />
-            <marker date="1462718491000" expanded="true" signature="1387:1475" placeholder="select pro_i... supply_details" />
-            <marker date="1462718491000" expanded="true" signature="1437:1474" placeholder="select id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1666:1703" placeholder="SELECT id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1672:1703" placeholder="select id fr... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="1898:1934" placeholder="select id fr... product3" />
-            <marker date="1462718491000" expanded="true" signature="2109:2138" placeholder="SELECT max(i... supplier3" />
-            <marker date="1462718491000" expanded="true" signature="2343:2371" placeholder="select max(i... product3" />
-            <marker date="1462718491000" expanded="true" signature="2653:2678" placeholder="select name product3" />
-            <marker date="1462718491000" expanded="true" signature="2907:2933" placeholder="select name supplier3" />
-            <marker date="1462718491000" expanded="true" signature="4272:4311" placeholder="insert into supply_details... " />
+            <marker date="1462789582000" expanded="true" signature="955:1042" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="993:1041" placeholder="select pro_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="993:1042" placeholder="select pro_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1040:1041" placeholder="select id fr... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="1322:1410" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="1361:1409" placeholder="select sup_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1361:1410" placeholder="select sup_i... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="1577:1606" placeholder="SELECT max(i... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="1811:1839" placeholder="select max(i... product3" />
+            <marker date="1462789582000" expanded="true" signature="2118:2143" placeholder="select name product3" />
+            <marker date="1462789582000" expanded="true" signature="2369:2395" placeholder="select name supplier3" />
+            <marker date="1462789582000" expanded="true" signature="3803:3842" placeholder="insert into supply_details... " />
+            <marker date="1462789582000" expanded="true" signature="4046:4094" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4060:4073" placeholder="select 1 fro... " />
+            <marker date="1462789582000" expanded="true" signature="4060:4093" placeholder="select 1 fro... product3" />
+            <marker date="1462789582000" expanded="true" signature="4265:4314" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4279:4313" placeholder="select 1 fro... supplier3" />
+            <marker date="1462789582000" expanded="true" signature="4504:4575" placeholder="select exist... " />
+            <marker date="1462789582000" expanded="true" signature="4518:4573" placeholder="select 1 fro... supply_details" />
+            <marker date="1462789582000" expanded="true" signature="4518:4574" placeholder="select 1 fro... supply_details" />
           </folding>
         </state>
       </provider>
