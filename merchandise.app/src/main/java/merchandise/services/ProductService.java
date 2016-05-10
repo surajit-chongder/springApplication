@@ -45,4 +45,9 @@ public class ProductService {
         }
         return false;
     }
+
+    public void deleteSpecificProduct(int id) {
+        productRepository.delete(id);
+    }
+
 }

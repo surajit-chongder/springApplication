@@ -45,4 +45,8 @@ public class SupplierService {
         }
         return false;
     }
+
+    public void deleteSpecificSupplier(int id) {
+        supplierRepository.delete(id);
+    }
 }
