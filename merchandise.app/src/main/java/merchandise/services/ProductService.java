@@ -34,6 +34,7 @@ public class ProductService {
 
     private int createNewProductId() {
         Product lastIncludedProduct = getAllProductList().get(getAllProductList().size() - 1);
+        System.out.println(lastIncludedProduct.getId());
         int lastIncludedProductId = lastIncludedProduct.getId();
         return ++lastIncludedProductId;
     }

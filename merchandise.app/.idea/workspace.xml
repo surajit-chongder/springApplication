@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b474146-f9a2-4f4a-a807-00ea6c41f10c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/../hello/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/build/classes/main/hello/Product.class" afterPath="$PROJECT_DIR$/../hello/build/classes/main/hello/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/controllers/SupplierDetailsController.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/controllers/SupplierDetailsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/services/SupplierDetailsService.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/services/SupplierDetailsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../hello/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/.idea/modules/hello_main.iml" afterPath="$PROJECT_DIR$/../hello/.idea/modules/hello_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/.idea/modules/hello_test.iml" afterPath="$PROJECT_DIR$/../hello/.idea/modules/hello_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../hello/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/build.gradle" afterPath="$PROJECT_DIR$/../hello/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hello/src/main/java/hello/Product.java" afterPath="$PROJECT_DIR$/../hello/src/main/java/hello/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/merchandise.app_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/merchandise.app_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/merchandise.app_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/merchandise.app_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/entities/Product.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/entities/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/entities/Supplier.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/entities/Supplier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/entities/SupplierDetails.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/entities/SupplierDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/merchandise/services/ProductService.class" afterPath="$PROJECT_DIR$/build/classes/main/merchandise/services/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/controllers/SupplierDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/controllers/SupplierDetailsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/services/SupplierDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/services/SupplierDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java" />
     </list>
     <ignored path="merchandise.app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,29 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SupplierDetails.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SupplierDetails.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding>
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#721#722#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#931#932#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,8 +91,8 @@
       <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state relative-caret-position="490">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,18 +103,10 @@
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-167">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,23 +115,14 @@
       <file leaf-file-name="Supplier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SupplierDetailsService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SupplierDetailsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/services/SupplierDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-354">
@@ -184,8 +145,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="429">
+              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -574,8 +535,8 @@
         <option value="$PROJECT_DIR$/src/main/java/merchandise/services/SupplierDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java" />
       </list>
     </option>
   </component>
@@ -904,8 +865,11 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hello" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1452,7 +1416,7 @@
       <workItem from="1463567775284" duration="476000" />
       <workItem from="1463752445546" duration="540000" />
       <workItem from="1463972524197" duration="270000" />
-      <workItem from="1464098203511" duration="2836000" />
+      <workItem from="1464098203511" duration="4244000" />
     </task>
     <servers />
   </component>
@@ -1480,7 +1444,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120458000" />
+    <option name="totallyTimeSpent" value="121866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1891,48 +1855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/controllers/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1949,42 +1871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/services/SupplierDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-354">
@@ -1993,5 +1879,136 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/services/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/merchandise/entities/SupplierDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>merchandise.app</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
