@@ -22,17 +22,17 @@ public class SupplierDetailsController {
     SupplierService supplierService;
 
     @RequestMapping(value = "/supplier_details", method = RequestMethod.GET)
-    public List<SupplierDetails> collectSuppliers() {
-        return supplierDetailsService.getAllStockDetails();
+    public List<SupplierDetails> getAllSupplierDetails() {
+        return supplierDetailsService.getAllSupplierDetails();
     }
 
     @RequestMapping(value = "/products/{id}/suppliers", method = RequestMethod.GET)
-    public List<Supplier> collectSuppliers(@PathVariable int id) {
+    public List<Supplier> getSuppliersOfSpecificProduct(@PathVariable int id) {
         return supplierDetailsService.getSuppliersOfSpecificProduct(id);
     }
 
     @RequestMapping(value = "/suppliers/{id}/list", method = RequestMethod.GET)
-    public List<SupplierDetails> collectProductsOfSpecificSupplier(@PathVariable Integer id) {
+    public List<SupplierDetails> getProductsOfSpecificSupplier(@PathVariable Integer id) {
         return supplierDetailsService.getProductsOfSpecificSupplier(id);
     }
 

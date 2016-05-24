@@ -16,7 +16,7 @@ public class SupplierController {
     SupplierService supplierService;
 
     @RequestMapping(value = "/suppliers", method = RequestMethod.GET)
-    public List<Supplier> collectSupplierList() {
+    public List<Supplier> getSupplierList() {
         return supplierService.getAllSupplierList();
     }
 

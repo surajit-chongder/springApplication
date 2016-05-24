@@ -13,7 +13,7 @@ public class ProductController {
     ProductService productService;
 
     @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public List<Product> collectProductList() {
+    public List<Product> getProductList() {
         return productService.getAllProductList();
     }
 

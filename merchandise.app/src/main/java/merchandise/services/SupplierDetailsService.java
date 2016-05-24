@@ -19,7 +19,7 @@ public class SupplierDetailsService {
     @Autowired
     ProductService productService;
 
-    public List<SupplierDetails> getAllStockDetails() {
+    public List<SupplierDetails> getAllSupplierDetails() {
         return (List<SupplierDetails>) supplierDetailsRepository.findAll();
     }
 
@@ -37,7 +37,7 @@ public class SupplierDetailsService {
         return supplierList;
     }
     private List<Integer> getAllSupplierIdsOfSpecificProductId(int id){
-        return getAllStockDetails()
+        return getAllSupplierDetails()
                 .stream()
                 .filter(eachStockDetails -> eachStockDetails.getProduct_id() == id)
                 .map(SupplierDetails::getSupplier_id)
@@ -45,7 +45,7 @@ public class SupplierDetailsService {
     }
 
     public List<SupplierDetails> getProductsOfSpecificSupplier(Integer id) {
-        return getAllStockDetails()
+        return getAllSupplierDetails()
                 .stream()
                 .filter(eachStockDetails -> eachStockDetails.getSupplier_id() == id)
                 .collect(Collectors.toList());
@@ -60,7 +60,7 @@ public class SupplierDetailsService {
     }
 
     public boolean hasSpecificProduct(int supplier_id, int productId) {
-        for (SupplierDetails eachStock : getAllStockDetails()) {
+        for (SupplierDetails eachStock : getAllSupplierDetails()) {
             if (eachStock.getSupplier_id() == supplier_id && eachStock.getProduct_id() == productId)
                 return true;
         }
@@ -68,14 +68,14 @@ public class SupplierDetailsService {
     }
 
     public void deleteSpecificProductStock(int id) {
-        getAllStockDetails()
+        getAllSupplierDetails()
                 .stream()
                 .filter(supplierDetails -> supplierDetails.getProduct_id() == id)
                 .forEach(supplierDetails -> supplierDetailsRepository.delete(supplierDetails.getId()));
     }
 
     public void deleteSpecificSupplierStock(int id) {
-        getAllStockDetails()
+        getAllSupplierDetails()
                 .stream()
                 .filter(supplierDetails -> supplierDetails.getSupplier_id() == id)
                 .forEach(supplierDetails -> supplierDetailsRepository.delete(supplierDetails.getId()));
