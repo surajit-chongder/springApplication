@@ -25,6 +25,7 @@ repositories {
 }
 
 dependencies {
+    compile "org.projectlombok:lombok:1.14.8"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile("org.springframework:spring-jdbc")
     compile "org.springframework.boot:spring-boot-starter-data-jpa"

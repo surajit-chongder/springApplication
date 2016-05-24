@@ -28,7 +28,7 @@ public class SupplierDetailsController {
 
     @RequestMapping(value = "/products/{id}/suppliers", method = RequestMethod.GET)
     public List<Supplier> collectSuppliers(@PathVariable int id) {
-        return supplierDetailsService.getSuppliersNameOfSpecificProduct(id);
+        return supplierDetailsService.getSuppliersOfSpecificProduct(id);
     }
 
     @RequestMapping(value = "/suppliers/{id}/list", method = RequestMethod.GET)
@@ -48,16 +48,6 @@ public class SupplierDetailsController {
         supplierDetailsService.deleteSpecificSupplierStock(id);
         return supplierService.getAllSupplierList();
     }
-//    @RequestMapping(value = "/products/{id}/update", method = RequestMethod.POST)
-//    public List<Product> updateSpecificProduct(@RequestBody Product product,@PathVariable int id) {
-//        productService.updateSpecificProduct(id,product.getName());
-//        return productService.getAllProductList();
-//    }
-//    @RequestMapping(value = "/suppliers/{id}/update", method = RequestMethod.POST)
-//    public List<Supplier> updateSpecificSupplier(@RequestBody Supplier supplier,@PathVariable int id) {
-//        supplierService.updateSpecificSupplier(id,supplier.getName());
-//        return supplierService.getAllSupplierList();
-//    }
 
     @RequestMapping(value = "/suppliers/{supplier_id}/products", method = RequestMethod.POST)
     public String saveSupplierAndProduct(@PathVariable Integer supplier_id, @RequestBody Map<String, Object> data) {
